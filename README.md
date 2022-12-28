@@ -7,4 +7,4 @@ Proyecto de practica para el uso de SASS: [Ver proyecto](https://layoutsass.netl
 - HTML
 - CSS
 - NPM
-  - SASS
+ - SASS
