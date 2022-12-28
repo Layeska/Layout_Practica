@@ -1,0 +1,57 @@
+@use "../utilities/variables";
+@use "../utilities/funciones";
+
+.row {
+    display: flex;
+    align-items: center;
+
+    .col {
+        width: 50%;
+    }
+
+    .col-30 {
+        width: 30%;
+    }
+
+    .col-70 {
+        width: 70%;
+    }
+}
+
+@for $i from 1 to variables.$limit {
+    .m-#{$i} {
+        margin: $i * variables.$unit;
+    }
+}
+
+@for $i from 1 to variables.$limit {
+    .p-#{$i} {
+        padding: $i * variables.$unit;
+    }
+}
+
+@for $i from 1 to variables.$limit {
+    .py-#{$i} {
+        padding: $i * variables.$unit 0;
+    }
+}
+
+@for $i from 1 to 4 {
+    .w-#{i} {
+        width: $i * 25%;
+    }
+}
+
+.prices {
+    .prev {
+        font-size: funciones.size(2);
+        font-weight: bolder;
+        color: variables.$font-color;
+        text-decoration: line-through;
+    }
+
+    .now {
+        font-size: funciones.size(5);
+        font-weight: bolder;
+    }
+}

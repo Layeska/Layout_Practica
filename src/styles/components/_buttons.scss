@@ -1,0 +1,17 @@
+@use "../utilities/mixins";
+@use "../utilities/variables";
+
+.btn {
+    &.btn-cta {
+        @include mixins.btn(variables.$primay-color, variables.$seconday-color, "true");
+        &:hover {
+            @include mixins.btn(variables.$seconday-color, variables.$terciary-color, "true");
+            box-shadow: variables.$box-shadow;
+        }
+    }
+
+    &:hover {
+        @include mixins.btn(variables.$terciary-color, variables.$seconday-color, "true");
+        box-shadow: variables.$box-shadow;
+    }
+}

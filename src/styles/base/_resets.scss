@@ -1,0 +1,33 @@
+@use "../utilities/variables";
+@use "../utilities/funciones";
+@use "../utilities/mixins";
+
+* {
+    @include mixins.reset-pm();
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    background-color: variables.$primay-color;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: variables.$seconday-color;
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: funciones.size(6);
+}
+
+h3 {
+    font-weight: lighter;
+    font-size: funciones.size(3);
+}
+
+.m-auto {
+    margin: 0 auto;
+}

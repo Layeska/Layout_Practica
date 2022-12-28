@@ -1,0 +1,5 @@
+@use "./variables";
+
+@function size($value) {
+    @return $value * variables.$unit;
+}

@@ -1,0 +1,22 @@
+@use "../utilities/mixins";
+@use "../utilities/variables";
+
+ul {
+    @include mixins.reset-pm();
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    li {
+        a{
+            @include mixins.btn($bg-color: variables.$terciary-color, 
+            $color-txt: variables.$font-color, $bold: "true");
+
+            &:hover {
+                @include mixins.btn($bg-color: variables.$seconday-color,
+                $color-txt: variables.$terciary-color, $bold:"false");
+                box-shadow: variables.$box-shadow;
+            }
+        }
+    }
+}
